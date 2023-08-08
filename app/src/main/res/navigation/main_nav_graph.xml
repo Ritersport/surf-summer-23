@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/splashFragment"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="nsu.leorita.surfapp.ui.splash_screen.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_cocktailsListFragment"
+            app:destination="@id/cocktailsListFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_addCocktailFragment"
+            app:destination="@id/addCocktailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cocktailsListFragment"
+        android:name="nsu.leorita.surfapp.ui.cocktails_list.CocktailsListFragment"
+        android:label="CocktailsListFragment"
+        tools:layout="@layout/fragment_cocktails_list"/>
+    <fragment
+        android:id="@+id/addCocktailFragment"
+        android:name="nsu.leorita.surfapp.ui.add_cocktail.AddCocktailFragment"
+        android:label="AddCocktailFragment" >
+        <action
+            android:id="@+id/action_addCocktailFragment_to_cocktailCreatingFragment"
+            app:destination="@id/cocktailCreatingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cocktailCreatingFragment"
+        android:name="nsu.leorita.surfapp.ui.cocktail_creating.CocktailCreatingFragment"
+        android:label="CocktailCreatingFragment" />
+</navigation>
